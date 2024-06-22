@@ -15,7 +15,7 @@ export function News() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true); // Add loading state
   const articlesPerPage = 3;
-  const BaseUrl = "http://localhost:8000"
+  const BaseUrl = "http://102.211.210.43/api" 
 
   useEffect(() => {
     fetch(`${BaseUrl}U/article/recent`)
@@ -35,7 +35,7 @@ export function News() {
   const handleSearch = (query) => {
     if (query) {
       setLoading(true); // Set loading to true when starting a search
-      fetch(`http://localhost:8000/article/rz?search=${query}`)
+      fetch(`http://102.211.210.43/api/article/rz?search=${query}`)
         .then(response => response.json())
         .then(data => {
           setSearchResults(data.articles);

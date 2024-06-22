@@ -9,7 +9,7 @@ const AccountSettings = () => {
     const [showAddAdminPopup, setShowAddAdminPopup] = useState(false);
     const [newAdminData, setNewAdminData] = useState({ fullName: '', username: '', password: '' });
     const axiosPrivate = useAxiosPrivate();
-    const BaseUrl = "http://localhost:8000"
+    const BaseUrl = "http://102.211.210.43/api"
 
 
     const getUserData = async () => {
